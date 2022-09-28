@@ -1,0 +1,13 @@
+/static/
+/psql/
+*/node_modules
+*.jpg
+*.png
+*.jfif
+*.zip
+*.mp3
+*.mp4
+*.PNG
+__pycache__/
+migrations/
+~/
