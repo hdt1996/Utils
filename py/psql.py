@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 from urllib.parse import quote_plus as urlquote
 from sqlalchemy.types import String, Date, DateTime
 import pandas as pd
-from ...Utilities.py.util import *
+from .util import *
 
 class PSQL():
     def __init__(self, host: str = "192.168.1.86", port: str = "5432", db: str = 'ws_generator', user: str = 'postgres', password: str = 'MrPho1219@'):

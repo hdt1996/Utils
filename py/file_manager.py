@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 from .util import *
-from ...String_Scanner.locals.txt_encoding import ENCODINGS
+from .src.txt_encoding import ENCODINGS
 import shutil
 import re
 

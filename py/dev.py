@@ -1,4 +1,4 @@
-from ...Utilities.py.directory import TEST_LOC, PROJ_DIR, LOG_DIR
+from .directory import TEST_LOC, PROJ_DIR, LOG_DIR
 import os
 
 class Development():

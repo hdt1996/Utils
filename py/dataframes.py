@@ -1,5 +1,5 @@
 import pandas as pd
-from ...Utilities.py.util import buildDictBoolbyArr
+from .util import buildDictBoolbyArr
 import numpy as np
 
 class DataFrames():
