@@ -92,7 +92,7 @@ class FileManager():
         else:
             self.writeText(file = file, text= ''.join(modified_text),overwrite=False)
 
-    def getDatafromFile(self, file_loc: os.PathLike, return_type: type = dict, titles: int= None, col_to_index: str|int = None, srs_col_num: str|int = None):
+    def getDatafromFile(self, file_loc: os.PathLike, return_type: type = dict, titles: int= None, col_to_index = None, srs_col_num = None):
         data = pd.read_csv(filepath_or_buffer = file_loc, header = titles)
         if return_type == dict:
             if col_to_index != None:
