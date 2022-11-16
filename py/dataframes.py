@@ -3,7 +3,7 @@ from .util import buildDictBoolbyArr
 import numpy as np
 
 class DataFrames():
-    #TODO allow multiple dataframes to be pulled and concated per arguments
+    #TODO allow multiple dataframes to be pulled and concatenated per arguments
     def __init__(self, df_col_names = [], df_index = ''):
         self.df = pd.DataFrame()
         self.col_dict = {}
@@ -77,6 +77,7 @@ class DataFrames():
                         col_dict[it_index].append(item)
                 indices.append(str(mult_index))
                 mult_index.pop()
+
             def recurse2(value: int, index: int, mult_index: list = [], n: int = 0, to_shape: tuple = ()):
                 mult_index.append(index)
                 curr_shape = to_shape[n]
@@ -89,6 +90,7 @@ class DataFrames():
                         indices.append(str(mult_index)) 
                     mult_index.pop()
                 mult_index.pop()
+                
             indices = []
             col_dict = {}
             if len(data.shape) == 1:
