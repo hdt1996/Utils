@@ -76,7 +76,7 @@ class Logger():
         for num, d in enumerate(arr):
             self.debug_dict[f"File {num}"] = d
 
-    def traceRelevantErrors(self,error_log:list,script_loc:os.PathLike,latest = False):
+    def traceRelevantErrors(self,error_log:list,script_loc:os.PathLike,latest = False, exception: Exception = None):
         new_error_log = ["\nRelevant Errors:\n"]
         proj_files_dict = FS.findFilesbyExt(file_type = '.py',location = script_loc, dict_keys=True)
         error_length = len(error_log)
@@ -85,9 +85,10 @@ class Logger():
             if file_name.upper() in proj_files_dict and index < error_length:
                 new_error_log.append(error_file)
         if len(new_error_log) == 1:
-            return None
+            return str(exception)
         if latest:
             return new_error_log.pop()
+
         return "\n".join(new_error_log)
 
 
